@@ -41,7 +41,7 @@ window.JOM_CUTI_CONTENT = {
       priceFrom: 320,
       description:
         "A legendary island with crystal-clear beaches, waterfalls and jaw-dropping sunsets from the Sky Bridge.",
-      image: "",
+      image: "images/langkawi.jpg",
       iconEmoji: "🏝️",
       iconColor: "#0E7C7B",
       lat: 6.3500,
