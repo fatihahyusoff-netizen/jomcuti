@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jom Cuti — Malaysia Holidays, Made Easy</title>
+<meta name="description" content="Jom Cuti — plan your Malaysia holiday: Langkawi, Penang, Cameron Highlands and more. Book instantly via WhatsApp or email." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="#top" class="logo">
+      <span class="stamp-badge mini-stamp"><span class="emoji">🌴</span></span>
+      <span id="site-name">Jom Cuti</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#destinations">Destinations</a>
+      <a href="#packages">Packages</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#booking" class="btn btn-primary nav-cta">Book Now</a>
+    </nav>
+  </div>
+</header>
+<div id="ad-banner-mount"></div>
+<main id="top">
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="eyebrow" id="hero-eyebrow"></span>
+        <h1 id="hero-headline"></h1>
+        <p id="hero-subheadline"></p>
+        <div class="hero-actions">
+          <a href="#destinations" class="btn btn-primary" id="hero-btn-primary"></a>
+          <a href="#booking" class="btn btn-secondary" id="hero-btn-secondary"></a>
+        </div>
+      </div>
+      <div class="hero-stamps" id="hero-stamps" aria-hidden="true"></div>
+    </div>
+    <svg class="wave-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path class="wave-fill-cream" d="M0,32 C240,80 480,0 720,24 C960,48 1200,80 1440,32 L1440,80 L0,80 Z"></path>
+    </svg>
+  </section>
+
+  <section class="destinations" id="destinations">
+    <div class="section-inner container">
+      <div class="section-head"><h2>Popular Destinations</h2><p>Six spots that deserve a place on your Malaysia bucket list. Tap a category to filter.</p></div>
+      <div class="filter-bar" id="filter-bar"></div>
+      <div class="card-grid" id="destination-grid"></div>
+    </div>
+    <svg class="wave-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path class="wave-fill-sand" d="M0,48 C240,0 480,80 720,40 C960,0 1200,64 1440,24 L1440,80 L0,80 Z"></path>
+    </svg>
+  </section>
+
+  <section class="map-section" id="map">
+    <div class="section-inner container">
+      <div class="section-head"><h2>Your Holiday Spots</h2><p>Tap a destination to see it live on Google Maps.</p></div>
+      <div class="map-layout">
+        <div class="map-list" id="map-list"></div>
+        <div class="map-frame-wrap">
+          <iframe id="map-frame" title="Destination map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a id="map-directions-float" class="map-directions-float" href="#" target="_blank" rel="noopener">📍 Get Directions</a>
+        </div>
+      </div>
+    </div>
+    <svg class="wave-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path class="wave-fill-cream" d="M0,32 C240,80 480,0 720,24 C960,48 1200,80 1440,32 L1440,80 L0,80 Z"></path>
+    </svg>
+  </section>
+
+  <section class="packages" id="packages">
+    <div class="section-inner container">
+      <div class="section-head"><h2>Holiday Packages</h2><p>Everything sorted — you just choose and pack.</p></div>
+      <div class="package-toolbar">
+        <label for="package-sort">Sort by:</label>
+        <select id="package-sort">
+          <option value="recommended">Recommended</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="nights-asc">Nights: Short to Long</option>
+        </select>
+      </div>
+      <div class="package-grid" id="package-grid"></div>
+    </div>
+    <svg class="wave-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path class="wave-fill-sand" d="M0,48 C240,0 480,80 720,40 C960,0 1200,64 1440,24 L1440,80 L0,80 Z"></path>
+    </svg>
+  </section>
+
+  <section class="trust" id="testimonials">
+    <div class="section-inner container">
+      <div class="section-head"><h2 id="trust-heading"></h2><p id="trust-subheading"></p></div>
+      <div class="trust-grid" id="trust-grid"></div>
+
+      <div class="testimonials-subhead"><h3 id="testimonials-heading"></h3></div>
+      <div class="testimonial-carousel">
+        <button type="button" class="carousel-btn" id="testimonial-prev" aria-label="Previous review">‹</button>
+        <div class="testimonial-track-wrap"><div class="testimonial-track" id="testimonial-track"></div></div>
+        <button type="button" class="carousel-btn" id="testimonial-next" aria-label="Next review">›</button>
+      </div>
+      <div class="carousel-dots" id="testimonial-dots"></div>
+    </div>
+    <svg class="wave-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path class="wave-fill-teal" d="M0,32 C240,80 480,0 720,24 C960,48 1200,80 1440,32 L1440,80 L0,80 Z"></path>
+    </svg>
+  </section>
+
+  <section class="booking" id="booking">
+    <div class="section-inner container">
+      <div class="section-head"><h2 id="booking-heading"></h2><p id="booking-subheading"></p></div>
+      <form class="booking-form" id="booking-form" novalidate>
+        <div class="form-grid">
+          <div class="form-field full"><label for="input-name">Full Name</label><input type="text" id="input-name" name="name" required placeholder="Your name" /></div>
+          <div class="form-field"><label for="input-destination">Destination</label><select id="input-destination" name="destination" required></select></div>
+          <div class="form-field"><label for="input-package">Package (optional)</label><select id="input-package" name="package"><option value="">None / Not sure yet</option></select></div>
+          <div class="form-field"><label for="input-pax">Number of Travellers</label><input type="number" id="input-pax" name="pax" min="1" value="2" required /></div>
+          <div class="form-field"><label for="input-phone">Your WhatsApp Number</label><input type="tel" id="input-phone" name="phone" required placeholder="012-3456789" /></div>
+          <div class="form-field"><label for="input-email">Your Email</label><input type="email" id="input-email" name="email" required placeholder="you@example.com" /></div>
+          <div class="form-field"><label for="input-departure">Departure Date</label><input type="date" id="input-departure" name="departure" required /></div>
+          <div class="form-field"><label for="input-return">Return Date</label><input type="date" id="input-return" name="return" required /></div>
+          <div class="nights-display" id="nights-display">Please select departure and return dates.</div>
+          <div class="price-estimate" id="price-estimate" style="display:none;">
+            <span class="amount" id="price-estimate-amount"></span>
+            <span class="note">Estimated total — final price confirmed on WhatsApp or email</span>
+          </div>
+          <div class="form-submit-row">
+            <div class="form-buttons">
+              <button type="submit" class="btn btn-whatsapp" id="submit-btn" disabled>💬 Send via WhatsApp</button>
+              <button type="button" class="btn btn-email" id="email-btn" disabled>📧 Send via Email</button>
+            </div>
+            <p class="form-note">Both options open your own WhatsApp or email app with your booking details pre-filled — just hit send to confirm.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><p id="footer-text"></p></footer>
+<script src="content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

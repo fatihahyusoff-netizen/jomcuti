@@ -1,0 +1,9 @@
+Put your destination and package photos in this folder.
+
+Example: save a Langkawi photo as langkawi.jpg here, then in content.js set
+image: "images/langkawi.jpg" for the Langkawi destination.
+
+Until you add a photo, the site automatically shows a colourful icon
+circle instead, so it's safe to publish before your photos are ready.
+
+See README.md in the main folder for full instructions.
