@@ -355,10 +355,40 @@
     ];
   }
 
+  /* --- Auto-save every booking to Google Sheets in the background --- */
+  const SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyvsR8XsZL0SR0leLL9I5qrMZf2DFCKfTuwnswTmVsh5VeC5JvvcLQzrzSxKLn7ohmT0g/exec";
+
+  function saveBookingToSheet() {
+    const dest = C.destinations.find((d) => d.id === destSelect.value);
+    const pkg = C.packages.find((p) => p.id === packageSelect.value);
+
+    const payload = {
+      name: $("#input-name").value.trim(),
+      destination: dest ? dest.name : destSelect.value,
+      package: pkg ? pkg.name : "Not sure yet",
+      departure: departureInput.value,
+      returnDate: returnInput.value,
+      nights: currentNights,
+      pax: $("#input-pax").value,
+      phone: $("#input-phone").value.trim(),
+      email: $("#input-email").value.trim(),
+    };
+
+    // "no-cors" mode: fire-and-forget, we don't need to read the response,
+    // and Apps Script doesn't return CORS headers by default.
+    fetch(SHEET_WEBHOOK_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain" },
+      body: JSON.stringify(payload),
+    }).catch((err) => console.error("Could not save booking to sheet:", err));
+  }
+
   /* --- Send via WhatsApp --- */
   $("#booking-form").addEventListener("submit", (e) => {
     e.preventDefault();
     if (submitBtn.disabled) return;
+    saveBookingToSheet();
     const lines = getBookingLines(C.booking.whatsappMessageIntro);
     const message = encodeURIComponent(lines.join("\n"));
     window.open(`https://wa.me/${C.site.whatsappNumber}?text=${message}`, "_blank", "noopener");
@@ -367,6 +397,7 @@
   /* --- Send via Email (opens the visitor's own email app, addressed to us) --- */
   emailBtn.addEventListener("click", () => {
     if (emailBtn.disabled) return;
+    saveBookingToSheet();
     const lines = getBookingLines(C.booking.emailIntro);
     const subject = encodeURIComponent(C.booking.emailSubject);
     const body = encodeURIComponent(lines.join("\n"));
