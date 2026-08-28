@@ -56,7 +56,7 @@ window.JOM_CUTI_CONTENT = {
       priceFrom: 250,
       description:
         "A street-food paradise and colourful George Town street art — every corner has a story to tell.",
-      image: "",
+      image: "penang.png",
       iconEmoji: "🍜",
       iconColor: "#E0384B",
       lat: 5.4141,
