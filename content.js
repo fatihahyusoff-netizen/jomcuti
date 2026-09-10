@@ -71,7 +71,7 @@ window.JOM_CUTI_CONTENT = {
       priceFrom: 210,
       description:
         "Rolling green tea plantations, year-round cool weather, and strawberries fresh from the farm.",
-      image: "",
+      image: "images/cameronhighland.jpg",
       iconEmoji: "🍃",
       iconColor: "#3F8F5B",
       lat: 4.4700,
