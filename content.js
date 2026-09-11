@@ -86,7 +86,7 @@ window.JOM_CUTI_CONTENT = {
       priceFrom: 180,
       description:
         "The iconic Petronas Twin Towers skyline, lively night markets, and entertainment that never sleeps.",
-      image: "",
+      image: "images/kualalumpur.jpg",
       iconEmoji: "🏙️",
       iconColor: "#F0A83E",
       lat: 3.1390,
