@@ -41,7 +41,7 @@ window.JOM_CUTI_CONTENT = {
       priceFrom: 320,
       description:
         "A legendary island with crystal-clear beaches, waterfalls and jaw-dropping sunsets from the Sky Bridge.",
-      image: "images/langkawi.jpg",
+      image: "",
       iconEmoji: "🏝️",
       iconColor: "#0E7C7B",
       lat: 6.3500,
@@ -56,7 +56,7 @@ window.JOM_CUTI_CONTENT = {
       priceFrom: 250,
       description:
         "A street-food paradise and colourful George Town street art — every corner has a story to tell.",
-      image: "images/penang.jpg",
+      image: "",
       iconEmoji: "🍜",
       iconColor: "#E0384B",
       lat: 5.4141,
@@ -86,7 +86,7 @@ window.JOM_CUTI_CONTENT = {
       priceFrom: 180,
       description:
         "The iconic Petronas Twin Towers skyline, lively night markets, and entertainment that never sleeps.",
-      image: "images/kualalumpur.jpg",
+      image: "",
       iconEmoji: "🏙️",
       iconColor: "#F0A83E",
       lat: 3.1390,
